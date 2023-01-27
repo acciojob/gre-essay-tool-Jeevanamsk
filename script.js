@@ -1,8 +1,11 @@
-//your code here
 
-    var textbox = document.getElementById("evaluatedText");
-    var wordCount = document.getElementById("wordCount");
-    textbox.addEventListener("input", function() {
-        wordCount.innerHTML = textbox.value.trim().split(/\s+/).length + " words";
+
+
+    const textbox = document.getElementById("evaluatedText");
+    const wordCount = document.getElementById("wordCount");
+    textbox.addEventListener("input", () => {
+        const words = textbox.value.trim().split(/\s+/).length;
+        wordCount.innerText = words || 0 ;
     });
+
 
