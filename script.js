@@ -1,11 +1,13 @@
+const textBox = document.getElementById('evaluatedText');
+const wordCount = document.getElementById('wordCount');
 
-
-
-    const textbox = document.getElementById("evaluatedText");
-    const wordCount = document.getElementById("wordCount");
-    textbox.addEventListener("input", () => {
-        const words = textbox.value.trim().split(/\s+/).length;
-        wordCount.innerText = words || 0 ;
-    });
+textBox.addEventListener('input', () => {
+  const text = textBox.value.trim();
+  if (text.length === 0) {
+    wordCount.textContent = '0';
+  } else {
+    wordCount.textContent = text.split(/\s+/).length;
+  }
+});
 
 
